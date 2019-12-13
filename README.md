@@ -9,3 +9,6 @@ With the availability of more programmatic interfaces and greater level of data 
 In this blog we'll use the TIG stack (Telegraf - the agent which connects to our custom python script, InfluxDB - time series database and Grafana - Visualisation and dashboards) to collect, store and display the network and device data from DNA-C.
 
 ![](https://alln-extcloud-storage.cisco.com/ciscoblogs/5d78aeb3710f9.png)
+
+# Step 0 - Download code and configure TIG stack
+
