@@ -12,5 +12,5 @@ In this blog we'll use the TIG stack (Telegraf - the agent which connects to our
 
 ![](https://alln-extcloud-storage.cisco.com/ciscoblogs/5d78aeb3710f9.png)
 
-## Step 0 - Download code and configure TIG stack
+### Step 0 - Download code and configure TIG stack
 
