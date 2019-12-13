@@ -1,4 +1,4 @@
-# Streaming-Telemetry-Lab-Guide
+# Network-Telemetry-Lab-Guide
 
 ## DNA-C Network Operations Centre Custom Dashboard
 
