@@ -64,7 +64,7 @@ Configuration of telemetry on IOS-XE can be done either by tradition CLI with th
 
 Please note the receiver ip address will depend on the IP address of your device, as in this guide we're connected to the sandbox via a VPN we can find our IP address from the anyconnect statistics menu, alternatively if you're using the DevBox the IP address will be shown from within your sandbox environment
 
-![](https://github.com/sttrayno/Network-Telemetry-Lab-Guide/images/ip-check.gif)
+![](https://github.com/sttrayno/Network-Telemetry-Lab-Guide/blob/master/images/ip-check.gif?raw=true)
 
 ```
 telemetry ietf subscription 101
