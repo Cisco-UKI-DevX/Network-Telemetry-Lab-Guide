@@ -42,7 +42,7 @@ First thing we need to do is configure our TIG stack on our local machine. Thank
 
 Let that pull down the required image from Docker hub then run the following command to start the container. 
 
-```docker run -ti /bin/bash -p 3000:3000 -p 57500:57500 jeremycohoe/tig_mdt```
+```docker run -ti -p 3000:3000 -p 57500:57500 jeremycohoe/tig_mdt```
 
 ### Step 2 - Setup our Yang explorer
 
