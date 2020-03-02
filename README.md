@@ -26,7 +26,7 @@ Please note you are free to use this with your own hardware or test environment.
 
 ![](https://github.com/sttrayno/Ansible-Lab-Guide/blob/master/images/sandbox-screen.png)
 
-There is also a Network Streaming Telemetry sandbox which you can also find in the catalogue.
+There is also a Model Driven Telemetry sandbox which you can also find in the catalogue, feel free to reserve that as many of the steps in this lab guide are already covered and the Docker containers are prespun up.
 
 ### Step 0 - Configure and Install Docker
 
@@ -60,9 +60,9 @@ Note: Yang explorer is only supported on Linux and Mac systems so if you are run
 
 ### Step 3 - Configure IOS-XE device for streaming telemetry and verify
 
-Configuration of telemetry on IOS-XE can be done either by tradition CLI with the "telemetry ietf subscription" commands, or programmatically with XML. In this guide we'll use the traditional CLI to configure a couple of models which are available on the device.
+Configuration of telemetry on IOS-XE can be done either by tradition CLI with the `telemetry ietf subscription` commands, or programmatically with XML. In this guide we'll use the traditional CLI to configure a couple of models which are available on the device.
 
-Please note the receiver ip address will depend on the IP address of your device, as in this guide we're connected to the sandbox via a VPN we can find our IP address from the anyconnect statistics menu, alternatively if you're using the DevBox the IP address will be shown from within your sandbox environment.
+Please note the receiver IP address will depend on the IP address of your device, as in this guide we're connected to the sandbox via a VPN we can find our IP address from the anyconnect statistics menu, alternatively if you're using the DevBox the IP address will be shown from within your sandbox environment.
 
 ![](https://github.com/sttrayno/Network-Telemetry-Lab-Guide/blob/master/images/ip-check.gif?raw=true)
 
@@ -149,7 +149,7 @@ Telemetry subscription receivers detail:
   Explanation:
 ```
 
-Now that your data has been configured to push out at the required intervals you might want to just leave the sandbox running for a little while to allow the influx DB to populate so we have some interesting data to visualise.
+Now that your data has been configured to push out at the required intervals you might want to just leave the sandbox running for a little while to allow the influxDB to populate so we have some interesting data to visualise.
 
 ### Step 4 - Configure Grafana dashboards
 
@@ -173,6 +173,6 @@ A few sample configs for the graphs found in the "examples" folder, you can be g
 
 Note: You may wish to adjust the time range at the top right to a smaller interval such as 15 minutes, rather than the default 6 hours to avoid having gaps in your graphs right now.
 
-Once you have the required number of graphs for you dashboard - in our case 4. You can then save your dashboard. 
+Once you have the required number of graphs for you dashboard - in our case 4. You can then save your dashboard and view it.
 
 Congratulations, you've created your first network telemetry dashboard!
