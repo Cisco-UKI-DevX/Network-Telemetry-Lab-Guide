@@ -1,4 +1,4 @@
-# Network-Telemetry-Lab-Guide
+# Network Telemetry Lab Guide
 
 ## Streaming Telemetry with IOS-XE
 
