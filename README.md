@@ -173,4 +173,6 @@ Note: You may wish to adjust the time range at the top right to a smaller interv
 
 Once you have the required number of graphs for you dashboard - in our case 4. You can then save your dashboard and view it.
 
+![](https://github.com/sttrayno/Network-Telemetry-Lab-Guide/blob/master/examples/Screenshot%202020-03-02%20at%2016.38.07.png?raw=true)
+
 Congratulations, you've created your first network telemetry dashboard!
