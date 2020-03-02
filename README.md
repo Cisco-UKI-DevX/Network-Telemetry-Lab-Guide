@@ -102,6 +102,7 @@ To configure the ietf subscriptions for this lab use the below configs
     
 When the 4 ietf subscriptions have been configured as above. You can verify the status of them with the command
 
+```
 csrv1000#show telemetry ietf subscription all
   Telemetry subscription brief
 
@@ -145,7 +146,7 @@ Telemetry subscription receivers detail:
   Profile:
   State: Connected
   Explanation:
-
+```
 
 ### Step 4 - Configure Grafana dashboards
 
