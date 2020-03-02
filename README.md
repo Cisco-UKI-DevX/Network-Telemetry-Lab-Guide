@@ -30,12 +30,38 @@ There is also a Network Streaming Telemetry sandbox which you can also find in t
 
 ### Step 0 - Configure and Install Docker
 
+For this lab we need to use Docker to host containers needed to run the TIG stack and yang-explorer which allows us to explore the streaming telemetry models available for our network device. If you already have docker
+
+Alternatively, you can use Model Driven Telemetry sandbox already available in the DevNet sandbox which has a developer box with both of these containers already configured and running which will save you a number of these steps. For completeness we'll walk through all the steps here.
+
 ### Step 1 - Setup our TIG stack
 
- docker run -ti -p 3000:3000 -p 57500:57500 jeremycohoe/tig_mdt
+First thing we need to do is configure our TIG stack on our local machine. Thankfully, Jeremy Cohoe has created a fantastic docker container with all the needed components preinstalled. You can pull the container from the Docker hub with the following shell command.
 
+```docker pull jeremycohoe/tig_mdt```
+
+Let that pull down the required image from Docker hub then run the following command to start the container. 
+
+```docker run -ti /bin/bash -p 3000:3000 -p 57500:57500 jeremycohoe/tig_mdt```
 
 ### Step 2 - Setup our Yang explorer
+
+Secondly we also need
+
+```docker pull robertcsapo/yang-explorer```
+
+Again, let that pull down the required image from Docker hub then run the following command to start the container. 
+
+```docker run -it --rm -p 8088:8088 robertcsapo/yang-explorer```
+
+Verify you can access the explorer at http://localhost:8088 then leave it aside for now, we'll come back to this later to look for the valid topics that we can receive data from.
+
+
+
+
+Note: Yang explorer is only supported on Linux and Mac systems so if you are running windows it may make more sense to use the developer box within your DevNet sandbox reservation.
+
+
 
 ### Step 3 - Configure IOS-XE device for streaming telemetry and verify
 
