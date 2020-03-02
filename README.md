@@ -70,7 +70,8 @@ For ease of use now we're going to use some predefined xpath's to collect data f
 
 To configure the ietf subscriptions for this lab use the below configs
 
-```telemetry ietf subscription 101
+```
+   telemetry ietf subscription 101
     encoding encode-kvgpb
     filter xpath /process-cpu-ios-xe-oper:cpu-usage/cpu-utilization
     stream yang-push
