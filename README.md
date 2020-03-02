@@ -159,11 +159,22 @@ To log into your Grafana, navigate to http://localhost:3000/ and login with the 
 
 When you're logged into Grafana you can then select `New Dashboard` from the left hand menu and create graphs as we do in the graphics below. You should be subscribed to most of the topics available in the drop downs below, just experiment and explore to find the ones you wish.
 
+![](https://github.com/sttrayno/Network-Telemetry-Lab-Guide/blob/master/images/ip-check.gif?raw=true)
+
 Once you've created one graph, you should then be able to add another panel from the 'add panel' button in the top right.
+
+![](https://github.com/sttrayno/Network-Telemetry-Lab-Guide/blob/master/images/grafana-2.gif?raw=true)
 
 A few sample configs for the graphs found in the "examples" folder, you can be guarenteed if you've followed this lab guide and the exact configs these graphs should provide data if all is done correct.
 
+![](https://github.com/sttrayno/Network-Telemetry-Lab-Guide/blob/master/images/grafana-3.gif?raw=true)
+
+![](https://github.com/sttrayno/Network-Telemetry-Lab-Guide/blob/master/images/grafana-4.gif?raw=true)
+
 Note: You may wish to adjust the time range at the top right to a smaller interval such as 15 minutes, rather than the default 6 hours to avoid having gaps in your graphs right now.
 
+Once you have the required number of graphs for you dashboard - in our case 4. You can then save your dashboard. 
+
+Congratulations, you've created your first network telemetry dashboard!
 
 
