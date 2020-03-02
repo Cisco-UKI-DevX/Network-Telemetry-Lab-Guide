@@ -149,11 +149,13 @@ Telemetry subscription receivers detail:
   Explanation:
 ```
 
+Now that your data has been configured to push out at the required intervals you might want to just leave the sandbox running for a little while to allow the influx DB to populate so we have some interesting data to visualise.
+
 ### Step 4 - Configure Grafana dashboards
 
-Now we should have our network device connected to our TIG stack pushing the telemetry data at the configured intervals, all thats now left to do is start to configure our dashboards
+Now we should have our network device connected to our TIG stack pushing the telemetry data at the configured intervals, all thats now left to do is start to configure our dashboards so we can create some nice visualisations.
 
-To log into your Grafana, navigate to http://localhost:3000/ and login with the username/password admin/Cisco123
+To log into your Grafana, navigate to http://localhost:3000/ and login with the username/password combination of admin/Cisco123
 
 
 
