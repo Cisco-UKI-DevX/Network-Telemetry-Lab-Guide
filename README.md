@@ -157,6 +157,13 @@ Now we should have our network device connected to our TIG stack pushing the tel
 
 To log into your Grafana, navigate to http://localhost:3000/ and login with the username/password combination of admin/Cisco123
 
+When you're logged into Grafana you can then select `New Dashboard` from the left hand menu and create graphs as we do in the graphics below. You should be subscribed to most of the topics available in the drop downs below, just experiment and explore to find the ones you wish.
+
+Once you've created one graph, you should then be able to add another panel from the 'add panel' button in the top right.
+
+A few sample configs for the graphs found in the "examples" folder, you can be guarenteed if you've followed this lab guide and the exact configs these graphs should provide data if all is done correct.
+
+Note: You may wish to adjust the time range at the top right to a smaller interval such as 15 minutes, rather than the default 6 hours to avoid having gaps in your graphs right now.
 
 
 
