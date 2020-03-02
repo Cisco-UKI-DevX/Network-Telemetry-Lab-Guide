@@ -18,3 +18,7 @@ In this blog we'll use the TIG stack (Telegraf - the agent which connects to our
 
 ### Step 0 - Download code and configure TIG stack
 
+
+ docker run -ti -p 3000:3000 -p 57500:57500 jeremycohoe/tig_mdt
+
+
