@@ -28,10 +28,21 @@ Please note you are free to use this with your own hardware or test environment.
 
 There is also a Network Streaming Telemetry sandbox which you can also find in the catalogue.
 
-### Step 0 - Download code and configure TIG stack
+### Step 0 - Configure and Install Docker
 
-
+### Step 1 - Setup our TIG stack
 
  docker run -ti -p 3000:3000 -p 57500:57500 jeremycohoe/tig_mdt
+
+
+### Step 2 - Setup our Yang explorer
+
+### Step 3 - Configure IOS-XE device for streaming telemetry and verify
+
+### Step 4 - Configure Grafana dashboards
+
+
+
+
 
 
