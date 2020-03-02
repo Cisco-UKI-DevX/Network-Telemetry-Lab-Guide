@@ -153,6 +153,7 @@ Telemetry subscription receivers detail:
 
 Now we should have our network device connected to our TIG stack pushing the telemetry data at the configured intervals, all thats now left to do is start to configure our dashboards
 
+To log into your Grafana, navigate to http://localhost:3000/ and login with the username/password admin/Cisco123
 
 
 
