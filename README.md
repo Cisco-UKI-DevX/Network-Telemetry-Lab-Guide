@@ -159,7 +159,7 @@ To log into your Grafana, navigate to http://localhost:3000/ and login with the 
 
 When you're logged into Grafana you can then select `New Dashboard` from the left hand menu and create graphs as we do in the graphics below. You should be subscribed to most of the topics available in the drop downs below, just experiment and explore to find the ones you wish.
 
-![](https://github.com/sttrayno/Network-Telemetry-Lab-Guide/blob/master/images/ip-check.gif?raw=true)
+![](https://github.com/sttrayno/Network-Telemetry-Lab-Guide/blob/master/images/grafana-1.gif?raw=true)
 
 Once you've created one graph, you should then be able to add another panel from the 'add panel' button in the top right.
 
