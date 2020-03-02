@@ -155,17 +155,17 @@ Now that your data has been configured to push out at the required intervals you
 
 Now we should have our network device connected to our TIG stack pushing the telemetry data at the configured intervals, all thats now left to do is start to configure our dashboards so we can create some nice visualisations.
 
-To log into your Grafana, navigate to http://localhost:3000/ and login with the username/password combination of admin/Cisco123
+To log into your Grafana, navigate to http://localhost:3000/ and login with the username/password combination of admin/Cisco123, if you're configuring your TIG stack manually you will have set the username/password in the setup process/
 
-When you're logged into Grafana you can then select `New Dashboard` from the left hand menu and create graphs as we do in the graphics below. You should be subscribed to most of the topics available in the drop downs below, just experiment and explore to find the ones you wish.
+When you're logged into Grafana you can then select `New Dashboard` from the left hand menu and create graphs as we do in the graphics below. You should be subscribed to most of the topics available in the drop downs, just experiment and explore to find the ones you wish. One thing you need to make sure is that the source is configured to the network device address, in our case 10.10.20.30.
 
 ![](https://github.com/sttrayno/Network-Telemetry-Lab-Guide/blob/master/images/grafana-1.gif?raw=true)
 
-Once you've created one graph, you should then be able to add another panel from the 'add panel' button in the top right.
+Once you've created one graph, you should then be able to add another panel from the 'add panel' button in the top right to create more graphs.
 
 ![](https://github.com/sttrayno/Network-Telemetry-Lab-Guide/blob/master/images/grafana-2.gif?raw=true)
 
-A few sample configs for the graphs found in the "examples" folder, you can be guarenteed if you've followed this lab guide and the exact configs these graphs should provide data if all is done correct.
+A few sample configs for the graphs found in the "examples" folder, you can be guaranteed if you've followed this lab guide and the configs are correct these graphs should provide relevant data.
 
 ![](https://github.com/sttrayno/Network-Telemetry-Lab-Guide/blob/master/images/grafana-3.gif?raw=true)
 
