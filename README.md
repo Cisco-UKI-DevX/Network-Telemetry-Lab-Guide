@@ -30,9 +30,9 @@ There is also a Network Streaming Telemetry sandbox which you can also find in t
 
 ### Step 0 - Configure and Install Docker
 
-For this lab we need to use Docker to host containers needed to run the TIG stack and yang-explorer which allows us to explore the streaming telemetry models available for our network device. If you already have docker
+For this lab we need to use Docker to host containers needed to run the TIG stack and yang-explorer which allows us to explore the streaming telemetry models available for our network device. If you already have docker installed you can proceed to Step 1 and start to pull down the containers required. If you do not have docker installed you can consult the docker documentation [here](https://docs.docker.com/install/)
 
-Alternatively, you can use Model Driven Telemetry sandbox already available in the DevNet sandbox which has a developer box with both of these containers already configured and running which will save you a number of these steps. For completeness we'll walk through all the steps here.
+Alternatively if you don't want to install docker on your own laptop, you can use Model Driven Telemetry sandbox already available in the DevNet sandbox which has a developer box with both of these containers already configured and running which will save you a number of these steps. For completeness we'll walk through all the steps here.
 
 ### Step 1 - Setup our TIG stack
 
