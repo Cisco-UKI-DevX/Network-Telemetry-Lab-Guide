@@ -167,8 +167,6 @@ Once you've created one graph, you should then be able to add another panel from
 
 A few sample configs for the graphs found in the "examples" folder, you can be guaranteed if you've followed this lab guide and the configs are correct these graphs should provide relevant data.
 
-![](https://github.com/sttrayno/Network-Telemetry-Lab-Guide/blob/master/images/grafana-3.gif?raw=true)
-
 ![](https://github.com/sttrayno/Network-Telemetry-Lab-Guide/blob/master/images/grafana-4.gif?raw=true)
 
 Note: You may wish to adjust the time range at the top right to a smaller interval such as 15 minutes, rather than the default 6 hours to avoid having gaps in your graphs right now.
