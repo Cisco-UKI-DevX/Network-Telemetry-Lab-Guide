@@ -62,18 +62,90 @@ Note: Yang explorer is only supported on Linux and Mac systems so if you are run
 
 Configuration of telemetry on IOS-XE can be done either by tradition CLI with the "telemetry ietf subscription" commands, or programmatically with XML. In this guide we'll use the traditional CLI to configure a couple of models which are available on the device.
 
-Please note the receiver ip address will depend on the IP address of your device, as in this guide we're connected to the sandbox via a VPN we can find our IP address from the anyconnect statistics menu, alternatively if you're using the DevBox the IP address will be shown from within your sandbox environment
+Please note the receiver ip address will depend on the IP address of your device, as in this guide we're connected to the sandbox via a VPN we can find our IP address from the anyconnect statistics menu, alternatively if you're using the DevBox the IP address will be shown from within your sandbox environment.
 
 ![](https://github.com/sttrayno/Network-Telemetry-Lab-Guide/blob/master/images/ip-check.gif?raw=true)
 
+For ease of use now we're going to use some predefined xpath's to collect data from, however should you wish to use your own device you can and use the yang explorer to find the xpath of the valid operational models.
+
+To configure the ietf subscriptions for this lab use the below configs
+
+```telemetry ietf subscription 101
+    encoding encode-kvgpb
+    filter xpath /process-cpu-ios-xe-oper:cpu-usage/cpu-utilization
+    stream yang-push
+    update-policy periodic 500
+    receiver ip address 192.168.63.1 57500 protocol grpc-tcp
+
+
+   telemetry ietf subscription 102
+    encoding encode-kvgpb
+    filter xpath /interfaces-ios-xe-oper:interfaces/interface/statistics
+    stream yang-push
+    update-policy periodic 500
+    receiver ip address 192.168.63.1 57500 protocol grpc-tcp
+  
+   telemetry ietf subscription 103
+    encoding encode-kvgpb
+    filter xpath /memory-ios-xe-oper:memory-statistics/memory-statistic
+    stream yang-push
+    update-policy periodic 500
+    receiver ip address 192.168.63.1 57500 protocol grpc-tcp
+
+   telemetry ietf subscription 104
+    encoding encode-kvgpb
+    filter xpath /interfaces-ios-xe-oper:interfaces/interface
+    stream yang-push
+    update-policy periodic 500
+    receiver ip address 192.168.63.1 57500 protocol grpc-tcp
 ```
-telemetry ietf subscription 101
- encoding encode-kvgpb
- filter xpath /process-cpu-ios-xe-oper:cpu-usage/cpu-utilization/five-seconds
- stream yang-push
- update-policy periodic 500
- receiver ip address 192.168.63.1 57500 protocol grpc-tcp
-```
+    
+When the 4 ietf subscriptions have been configured as above. You can verify the status of them with the command
+
+csrv1000#show telemetry ietf subscription all
+  Telemetry subscription brief
+
+  ID               Type        State       Filter type
+  --------------------------------------------------------
+  101              Configured  Valid       xpath
+
+csrv1000#
+csrv1000#show telemetry ietf subscription 101 detail
+Telemetry subscription detail:
+
+  Subscription ID: 101
+  Type: Configured
+  State: Valid
+  Stream: yang-push
+  Filter:
+    Filter type: xpath
+    XPath: /process-cpu-ios-xe-oper:cpu-usage/cpu-utilization
+  Update policy:
+    Update Trigger: periodic
+    Period: 500
+  Encoding: encode-kvgpb
+  Source VRF:
+  Source Address:
+  Notes:
+
+  Receivers:
+    Address                                    Port     Protocol         Protocol Profile
+    -----------------------------------------------------------------------------------------
+    192.168.63.1                               57500    grpc-tcp
+
+
+csrv1000#
+csrv1000#show telemetry ietf subscription 101 receiver
+Telemetry subscription receivers detail:
+
+  Subscription ID: 101
+  Address: 192.168.63.1
+  Port: 57500
+  Protocol: grpc-tcp
+  Profile:
+  State: Connected
+  Explanation:
+
 
 ### Step 4 - Configure Grafana dashboards
 
