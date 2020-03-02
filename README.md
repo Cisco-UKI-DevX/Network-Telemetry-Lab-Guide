@@ -10,6 +10,8 @@ Since the IOS XE 16.6 release there has been support for model driven telemetry,
 
 In this blog we'll use the TIG stack (Telegraf - the agent which connects to our custom python script, InfluxDB - time series database and Grafana - Visualisation and dashboards) to collect, store and display the network and device data from our IOS-XE devices. The objective of this lab is to get you comfortable using TIG stack and Streaming Telemetry protocols. As you gain more expertise you'll be able to leverage these technologies to build more complex monitoring systems to gather data from a multitude of devices and systems and display in more useful ways.
 
+![](images/tig-stack.png)
+
 ### Step 0 - Download code and configure TIG stack
 
 
