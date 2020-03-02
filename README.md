@@ -150,6 +150,7 @@ Telemetry subscription receivers detail:
 
 ### Step 4 - Configure Grafana dashboards
 
+Now we should have our network device connected to our TIG stack pushing the telemetry data at the configured intervals, all thats now left to do is start to configure our dashboards
 
 
 
