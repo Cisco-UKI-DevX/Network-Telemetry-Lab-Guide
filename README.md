@@ -56,14 +56,24 @@ Again, let that pull down the required image from Docker hub then run the follow
 
 Verify you can access the explorer at http://localhost:8088 then leave it aside for now, we'll come back to this later to look for the valid topics that we can receive data from.
 
-
-
-
 Note: Yang explorer is only supported on Linux and Mac systems so if you are running windows it may make more sense to use the developer box within your DevNet sandbox reservation.
 
-
-
 ### Step 3 - Configure IOS-XE device for streaming telemetry and verify
+
+Configuration of telemetry on IOS-XE can be done either by tradition CLI with the "telemetry ietf subscription" commands, or programmatically with XML. In this guide we'll use the traditional CLI to configure a couple of models which are available on the device.
+
+Please note the receiver ip address will depend on the IP address of your device, as in this guide we're connected to the sandbox via a VPN we can find our IP address from the anyconnect statistics menu, alternatively if you're using the DevBox the IP address will be shown from within your sandbox environment
+
+![](https://github.com/sttrayno/Network-Telemetry-Lab-Guide/images/ip-check.gif)
+
+```
+telemetry ietf subscription 101
+ encoding encode-kvgpb
+ filter xpath /process-cpu-ios-xe-oper:cpu-usage/cpu-utilization/five-seconds
+ stream yang-push
+ update-policy periodic 500
+ receiver ip address 192.168.63.1 57500 protocol grpc-tcp
+```
 
 ### Step 4 - Configure Grafana dashboards
 
