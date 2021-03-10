@@ -46,19 +46,12 @@ Let that pull down the required image from Docker hub then run the following com
 
 ```docker run -ti -p 3000:3000 -p 57500:57500 jeremycohoe/tig_mdt```
 
-### Step 2 - Setup our Yang explorer
+### Step 2 - Setup Yang Suite (previously Yang Explorer)
 
-Secondly we also need
+> This step is optional.
 
-```docker pull robertcsapo/yang-explorer```
+Yang Suite lets us connect to a device and explore what Yang models it has available. Full install details are [here](https://developer.cisco.com/yangsuite/).
 
-Again, let that pull down the required image from Docker hub then run the following command to start the container. 
-
-```docker run -it --rm -p 8088:8088 robertcsapo/yang-explorer```
-
-Verify you can access the explorer at http://localhost:8088 then leave it aside for now, we'll come back to this later to look for the valid topics that we can receive data from.
-
-Note: Yang explorer is only supported on Linux and Mac systems so if you are running windows it may make more sense to use the developer box within your DevNet sandbox reservation.
 
 ### Step 3 - Configure IOS-XE device for streaming telemetry and verify
 
